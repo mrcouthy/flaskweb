@@ -1,0 +1,36 @@
+# Python bytecode files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+.venv/
+ENV/
+*.env
+
+# Distribution / packaging
+*.egg-info/
+*.egg
+dist/
+build/
+pip-wheel-metadata/
+
+# Test and coverage
+*.coverage
+*.hypothesis/
+nosetests.xml
+coverage.xml
+*.cover
+*.log
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
+
+# MacOS-specific
+.DS_Store
+
+# Python config
+*.pyc
