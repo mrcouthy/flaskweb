@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block window_title %}Profile{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <h1 class="text-center mb-4">Profile</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">User Information</h5>
+                <p class="card-text"><strong>Username:</strong> {{ current_user.username }}</p>
+                <p class="card-text"><strong>Email:</strong> {{ current_user.email }}</p>
+                <p class="card-text"><strong>Role:</strong> {{ current_user.role | capitalize }}</p>
+                {# Add a link to edit profile if that functionality exists later #}
+                {# <a href="#" class="btn btn-primary">Edit Profile</a> #}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

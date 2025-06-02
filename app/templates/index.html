@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block window_title %}Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Hi, {{ current_user.username if current_user.is_authenticated else 'Guest' }}!</h1>
+    <p class="lead">Welcome to My Flask App. This is a starting point for a more complex application.</p>
+    <hr class="my-4">
+    <p>Explore the features and enjoy your stay.</p>
+    {% if current_user.is_authenticated %}
+        <a class="btn btn-primary btn-lg" href="{{ url_for('auth.profile') }}" role="button">View Profile</a>
+    {% else %}
+        <a class="btn btn-primary btn-lg" href="{{ url_for('auth.login') }}" role="button">Login</a>
+        <a class="btn btn-secondary btn-lg" href="{{ url_for('auth.register') }}" role="button">Register</a>
+    {% endif %}
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Application Overview</h2>
+        <p>This application demonstrates user authentication, authorization, and basic Flask app structure including Blueprints and static file serving. Feel free to build upon this foundation.</p>
+    </div>
+</div>
+{% endblock %}

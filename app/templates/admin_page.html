@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block window_title %}Admin Page{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card border-primary mb-3">
+            <div class="card-header bg-primary text-white">
+                <h1 class="h3 mb-0">Admin Dashboard</h1>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Welcome, {{ current_user.username }}!</h5>
+                <p class="card-text">This page is exclusively for users with the 'Admin' role.</p>
+                <p class="card-text">Your current role: <span class="badge badge-success">{{ current_user.role | capitalize }}</span></p>
+                <hr>
+                <p class="card-text">Future admin functionalities can be added here, such as user management, site settings, etc.</p>
+                {# Example: <a href="#" class="btn btn-info">Manage Users</a> #}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
